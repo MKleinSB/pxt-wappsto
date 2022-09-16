@@ -8,7 +8,6 @@
     "files": [
         "README.md",
         "wappsto.ts",
-        "calliope.ts",
         "_locales/en/pxt-wappsto-jsdoc-strings.json",
         "_locales/en/pxt-wappsto-strings.json",
         "_locales/da/pxt-wappsto-jsdoc-strings.json",

@@ -53,6 +53,7 @@ namespace wappsto {
     let wappstoConnected: boolean = false;
     let queueFull: boolean = false;
 
+
     /**
      * Create a empty JSON obj
      */
@@ -236,7 +237,7 @@ namespace wappsto {
         let data: string = generateJSON(json);
         let buffer: Buffer = toUTF8Buffer(data);
 
-        // allow microbit i2c ring buffer to empty
+        // allow calliope i2c ring buffer to empty
         basic.pause(50);
 
         pins.i2cWriteBuffer(i2cDevice, buffer, false);
@@ -418,11 +419,11 @@ namespace wappsto {
     }
 
     /**
-     * Configure the name of your Micro:bit on Wappsto.
-     * @param name The name of your Micro:bit
+     * Configure the name of your Calliope on Wappsto.
+     * @param name The name of your Calliope mini
      */
     //% weight=80
-    //% blockId="wapp_configure_name" block="setup Micro:bit on Wappsto with name %name"
+    //% blockId="wapp_configure_name" block="setup Calliope mini on Wappsto with name %name"
     //% name.defl="Name"
     //% group="Data model"
     export function configureName(name: string): void {
@@ -643,31 +644,6 @@ namespace wappsto {
         json["apn"] = apn;
 
         writeToWappstobit(json);
-    }
-
-    /**
-     * Send a sleep command.
-     */
-    //% weight=40
-    //% advanced=true
-    //% blockId="wapp_sleep" block="start sleep mode"
-    //% group="Wappsto:bit configuration"
-    export function commandSleep(): void {
-        pins.digitalWritePin(wakePin, 0)
-        writeCommand("sleep");
-    }
-
-    /**
-     * Send a wake signal.
-     */
-    //% weight=40
-    //% advanced=true
-    //% blockId="wapp_wake" block="wakeup from sleep"
-    //% group="Wappsto:bit configuration"
-    export function commandWake(): void {
-        pins.digitalWritePin(wakePin, 1)
-        basic.pause(100)
-        pins.digitalWritePin(wakePin, 0)
     }
 
 

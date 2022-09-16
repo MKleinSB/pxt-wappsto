@@ -4,7 +4,7 @@
   "wappsto.configureApn": "Konfigurieren Sie den APN, mit dem sich das Wappsto:bit verbindet, wenn es sich im Mobilfunknetz befindet.",
   "wappsto.configureApn|param|apn": "Der APN-String",
   "wappsto.configureName": "Stellt die Verbindung zu Wappsto über Wappsto:bit her.",
-  "wappsto.configureName|param|name": "Der Name Ihres Micro:bit",
+  "wappsto.configureName|param|name": "Der Name Ihres Calliope mini",
   "wappsto.configureNumberValue": "Konfigurieren Sie den Wappsto-Zahlenwert.",
   "wappsto.configureNumberValue|param|max": "Der maximale Wert der Zahl",
   "wappsto.configureNumberValue|param|min": "Der minimale Wert der Zahl",
