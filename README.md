@@ -24,13 +24,13 @@ wappsto.sendCleanToWappsto();
 wappsto.configureName("MyBit");
 wappsto.configureValue(1, "Light Value", WappstoValueTemplate.Light);
 wappsto.configureNumberValue(2, "Test Value", "Test", 0, 100, 1, "none");
-wappsto.configureStringValue(15, "Test String Value", "Test");
+wappsto.configureStringValue(16, "Test String Value", "Test");
 
 // Register event handlers
 wappsto.onNumberEvent(2, (num) => {
     basic.showNumber(num);
 });
-wappsto.onStringEvent(15, (str) => {
+wappsto.onStringEvent(16, (str) => {
     basic.showString(str);
 });
 
