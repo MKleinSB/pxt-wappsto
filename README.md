@@ -1,7 +1,7 @@
 # Wappsto:bit Calliope [![Build Status](https://travis-ci.com/Wappsto/pxt-wappsto.svg?branch=master)](https://travis-ci.com/Wappsto/pxt-wappsto)
 
 This is the Calliope mini extension for Wappsto:bit by Seluxit.
-Wappsto:bit is a module that lets you connect your microbit to the Internet in an easy and intuitive way.
+Wappsto:bit is a module that lets you connect your Calliope mini to the Internet in an easy and intuitive way.
 Drag in the blocks in makecode and data is available on wappsto.com in a dashboard right away.
 The Wappsto mobile App allows for both viewing data and controlling your micro:bit from the Internet.
 

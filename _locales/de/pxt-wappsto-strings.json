@@ -1,6 +1,6 @@
 {
-  "WappstoTransmit.ASAP|block": "Wenn möglich",
-  "WappstoTransmit.OnChange|block": "Wenn geändert",
+  "WappstoTransmit.ASAP|block": "wenn möglich",
+  "WappstoTransmit.OnChange|block": "wenn geändert",
   "WappstoValueTemplate.Acceleration|block": "Beschleunigung",
   "WappstoValueTemplate.Compass|block": "Kompass",
   "WappstoValueTemplate.Latitude|block": "Breitengrad",
