@@ -630,24 +630,6 @@ namespace wappsto {
     }
 
     /**
-     * Configurere the APN to which the Wappsto:bit connects when on cellular network.
-     * @param apn The APN string
-     */
-    //% blockId="wapp_configure_apn"
-    //% block="configure cellular APN: %apn"
-    //% apn.defl="telenor.iot"
-    //% group="Wappsto:bit configuration"
-    //% advanced=true
-    export function configureApn(apn: string): void {
-        let json = createJSON();
-        json["command"] = "config_apn";
-        json["apn"] = apn;
-
-        writeToWappstobit(json);
-    }
-
-
-    /**
      * Send a clean command to Wappsto.
      */
     //% weight=40
@@ -656,24 +638,6 @@ namespace wappsto {
     //% group="Data model"
     export function sendCleanToWappsto(): void {
         writeCommand("clean");
-    }
-
-    /**
-     * Input block returning the longitude of the Wappsto:bit. NaN if not available.
-     */
-    //% block="GPS longitude"
-    //% group="Wappsto:bit information"
-    export function longitude(): number {
-        return gpsLongitude;
-    }
-
-    /**
-     * Input block returning the latitude of the Wappsto:bit. NaN if not available.
-     */
-    //% block="GPS latitude"
-    //% group="Wappsto:bit information"
-    export function latitude(): number {
-        return gpsLatitude;
     }
 
     /**

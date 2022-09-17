@@ -1,14 +1,9 @@
-# Wappsto:bit [![Build Status](https://travis-ci.com/Wappsto/pxt-wappsto.svg?branch=master)](https://travis-ci.com/Wappsto/pxt-wappsto)
+# Wappsto:bit Calliope [![Build Status](https://travis-ci.com/Wappsto/pxt-wappsto.svg?branch=master)](https://travis-ci.com/Wappsto/pxt-wappsto)
 
-This is the Micro:bit extension for Wappsto:bit by Seluxit.
+This is the Calliope mini extension for Wappsto:bit by Seluxit.
 Wappsto:bit is a module that lets you connect your microbit to the Internet in an easy and intuitive way.
 Drag in the blocks in makecode and data is available on wappsto.com in a dashboard right away.
 The Wappsto mobile App allows for both viewing data and controlling your micro:bit from the Internet.
-
-Wappsto:bit comes in 3 configurations:
-* Wappsto:bit Basic (Wifi connectivity)
-* Wappsto:bit NB-IoT (Wifi, 5G NB-IoT connectivity)
-* Wappsto:bit NB-IoT+ (Wifi, 5G NB-IoT connectivity and GPS location)
 
 ## Getting started
 * Getting started video: https://www.youtube.com/watch?v=GCt_CLVkZNs
@@ -19,7 +14,7 @@ Wappsto:bit comes in 3 configurations:
 
 ```blocks
 // Configure adv settings
-wappsto.configureWifi("ssid", "passsword");
+wappsto.configureWifi("ssid", "password");
 wappsto.configureApn("new apn");
 
 // Clean old data model
@@ -53,18 +48,6 @@ wappsto.sendNumberToWappsto(1, input.lightLevel(), WappstoTransmit.OnChange);
 wappsto.sendStringToWappsto("Hello From Wappsto:Bit", 15, WappstoTransmit.ASAP);
 
 // Read data from Wappsto:bit
-basic.showString("GPS");
-let lon = wappsto.longitude();
-let lat = wappsto.latitude();
-if (isNaN(lat) || isNaN(lon)) {
-    basic.showString("NO");
-} else {
-    basic.showNumber(lon);
-    basic.showNumber(lat);
-}
-basic.clearScreen();
-basic.pause(1000);
-
 if(wappsto.signalQuality() > 30) {
     basic.showString("Good signal");
 } else {
@@ -86,7 +69,7 @@ basic.showNumber(wappsto.uptime());
 
 ### configure name
 
-Configure the name of your Micro:bit on Wappsto.
+Configure the name of your Calliope mini on Wappsto.
 
 ```sig
 wappsto.configureName("name")
@@ -160,22 +143,6 @@ Send a clean command to Wappsto.
 wappsto.sendCleanToWappsto()
 ```
 
-### longitude
-
-Input block returning the longitude of the Wappsto:bit. NaN if not available.
-
-```sig
-wappsto.longitude()
-```
-
-### latitude
-
-Input block returning the latitude of the Wappsto:bit. NaN if not available.
-
-```sig
-wappsto.latitude()
-```
-
 ### signal quality
 
 Input block returning the signal quality of the network link [0-100%].
@@ -222,14 +189,6 @@ Configurere the SSID to which the Wappsto:bit connects when on Wi-Fi network.
 
 ```sig
 wappsto.configureWifi("ssid", "password")
-```
-
-### configure apn
-
-Configurere the APN to which the Wappsto:bit connects when on cellular network.
-
-```sig
-wappsto.configureApn("apn")
 ```
 
 ## License

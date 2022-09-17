@@ -1,7 +1,6 @@
 {
     // Configure adv settings
-    wappsto.configureWifi("ssid", "passsword");
-    wappsto.configureApn("new apn");
+    wappsto.configureWifi("ssid", "password");
 
     // Clean old data model
     wappsto.sendCleanToWappsto();
@@ -10,13 +9,13 @@
     wappsto.configureName("MyBit");
     wappsto.configureValue(1, "Light Value", WappstoValueTemplate.Light);
     wappsto.configureNumberValue(2, "Test Value", "Test", 0, 100, 1, "none");
-    wappsto.configureStringValue(15, "Test String Value", "Test");
+    wappsto.configureStringValue(16, "Test String Value", "Test");
 
     // Register event handlers
     wappsto.onNumberEvent(2, (num) => {
         basic.showNumber(num);
     });
-    wappsto.onStringEvent(15, (str) => {
+    wappsto.onStringEvent(16, (str) => {
         basic.showString(str);
     });
 
@@ -31,20 +30,7 @@
 
     // Send updates to Wappsto
     wappsto.sendNumberToWappsto(1, input.lightLevel(), WappstoTransmit.OnChange);
-    wappsto.sendStringToWappsto("Hello From Wappsto:Bit", 15, WappstoTransmit.ASAP);
-
-    // Read data from Wappsto:bit
-    basic.showString("GPS");
-    let lon = wappsto.longitude();
-    let lat = wappsto.latitude();
-    if (isNaN(lat) || isNaN(lon)) {
-        basic.showString("NO");
-    } else {
-        basic.showNumber(lon);
-        basic.showNumber(lat);
-    }
-    basic.clearScreen();
-    basic.pause(1000);
+    wappsto.sendStringToWappsto("Hello From Wappsto:Bit", 16, WappstoTransmit.ASAP);
 
     if(wappsto.signalQuality() > 30) {
         basic.showString("Good signal");
