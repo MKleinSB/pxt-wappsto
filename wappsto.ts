@@ -43,8 +43,7 @@ namespace wappsto {
     let handlers: any[] = [];
     let model: { [index: string]: string }[] = [];
     let oldValue: any[] = [];
-    let gpsLongitude: number = NaN;
-    let gpsLatitude: number = NaN;
+
     let signal: number = 0;
     let connectionStatus: string = "";
     let connectionInfo: string = "";
@@ -308,7 +307,7 @@ namespace wappsto {
      }
 
     /**
-     * Create a defualt value on Wappsto
+     * Create a default value on Wappsto
      */
     function createDefaultValue(valueID: number): void {
         let json = createJSON();
@@ -366,18 +365,6 @@ namespace wappsto {
         for (let i: number = 0; i < keys.length; i++) {
             val = json[keys[i]];
             switch (keys[i]) {
-                case "lon":
-                    tmp = parseFloat(val);
-                    if (tmp != 0.0) {
-                        gpsLongitude = tmp;
-                    }
-                    break;
-                case "lat":
-                    tmp = parseFloat(val);
-                    if (tmp != 0.0) {
-                        gpsLatitude = tmp;
-                    }
-                    break;
                 case "signal":
                     signal = parseInt(val);
                     break;
@@ -422,7 +409,7 @@ namespace wappsto {
      * Configure the name of your Calliope on Wappsto.
      * @param name The name of your Calliope mini
      */
-    //% weight=80
+    //% weight=97
     //% blockId="wapp_configure_name" block="setup Calliope mini on Wappsto with name %name"
     //% name.defl="Name"
     //% group="Data model"
