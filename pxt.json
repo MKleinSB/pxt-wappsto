@@ -8,8 +8,6 @@
     "files": [
         "README.md",
         "wappsto.ts",
-        "_locales/en/pxt-wappsto-jsdoc-strings.json",
-        "_locales/en/pxt-wappsto-strings.json",
         "_locales/da/pxt-wappsto-jsdoc-strings.json",
         "_locales/da/pxt-wappsto-strings.json",
         "_locales/de/pxt-wappsto-jsdoc-strings.json",
@@ -18,13 +16,16 @@
     "testFiles": [
         "wappstotest.ts"
     ],
-    "public": true,
-    "supportedTargets": [
-        "calliope",
-        "calliopemini"
-    ],
-    "preferredEditor": "tsprj",
     "fileDependencies": {
         "calliope.ts": "target:calliopemini"
-    }
+    },
+    "public": true,
+    "targetVersions": {
+        "target": "4.0.29",
+        "targetId": "calliopemini"
+    },
+    "supportedTargets": [
+        "calliopemini"
+    ],
+    "preferredEditor": "tsprj"
 }
